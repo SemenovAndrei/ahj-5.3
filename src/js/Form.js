@@ -32,20 +32,24 @@ export default class Form {
     this.form.innerHTML = `
     <div class="form-content">
       <div class="wrapper">
-        <label class="form-title">Название
-          <input class="field field-title" placeholder="write the name here">
+        <label class="label title-to">Туда
+          <input class="field field-to" type="date">
           <div class="hint"></div>
         </label>
       </div>
-      <div class="wrapper">
-        <label class="form-price">Стоимость
-          <input class="field field-price" placeholder="write the price here">
+      <div class="wrapper wrapper-back">
+        <label class="label title-back">Обратно
+          <input class="field field-back-checkbox" type="checkbox">
+          <input class="field field-back" type="date">
           <div class="hint"></div>
         </label>
       </div>
       <div class="form-controls">
-        <button class="button button-form button-save">Сохранить</button>
-        <button class="button button-form button-cancel">Отмена</button>
+        <button class="button button-form button-sale">Купить</button>
+      </div>
+      <div class="tickets">
+        <div class="ticket-to"></div>
+        <div class="ticket-back"></div>
       </div>
     </div>
     `;

@@ -1,18 +1,10 @@
-import Item from './Item';
 import Form from './Form';
 import Elements from './Elements';
-import ListCrud from './ListCrud';
-
-const item = new Item();
+import DateCalendar from './DateCalendar';
 
 const form = new Form();
 
-const elements = new Elements(item, form);
+const elements = new Elements(form);
 
-const listCrud = new ListCrud(elements);
-listCrud.init();
-
-listCrud.addItem({ title: 'iPhone XR', price: 60000 });
-listCrud.addItem({ title: 'Samsung Galaxy S10+', price: 80000 });
-listCrud.addItem({ title: 'Huawei View', price: 50000 });
-listCrud.showItems();
+const dateCalendar = new DateCalendar(elements);
+dateCalendar.init();
