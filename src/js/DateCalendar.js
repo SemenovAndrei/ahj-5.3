@@ -144,6 +144,9 @@ export default class DateCalendar {
     }
   }
 
+  /**
+   * Show tickets value on page
+   */
   showTickets() {
     if (this.fieldTo.value) {
       this.elements.form.querySelector('.ticket-to').innerHTML = `Билет туда: <span class="ticket-value">${this.fieldTo.value}</span>`;
@@ -158,6 +161,9 @@ export default class DateCalendar {
     this.fieldTo = null;
   }
 
+  /**
+   * Reset tickets value
+   */
   resetTickets() {
     this.elements.form.querySelector('.ticket-to').textContent = '';
     this.elements.form.querySelector('.ticket-back').textContent = '';
