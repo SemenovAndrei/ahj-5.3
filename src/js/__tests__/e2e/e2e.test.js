@@ -41,31 +41,12 @@ describe('ListCRUD', () => {
   test('buttons', async () => {
     await page.goto(baseUrl);
 
-    const buttonAdd = await page.$('.button-add');
-    buttonAdd.click();
-
-    await page.type('.field-title', 'test');
-    await page.waitForTimeout(2000);
-    await page.type('.field-price', '123');
+    const fieldTo = await page.$('.field-to');
+    fieldTo.click();
     await page.waitForTimeout(2000);
 
-    const buttonSave = await page.$('.button-save');
-    buttonSave.click();
+    const buttonSale = await page.$('.button-sale');
+    buttonSale.click();
     await page.waitForTimeout(2000);
-
-    const buttonEdit = await page.$('.button-edit');
-    buttonEdit.click();
-    await page.waitForTimeout(2000);
-
-    await page.type('.field-title', 'test123');
-    await page.waitForTimeout(2000);
-    buttonSave.click();
-    await page.waitForTimeout(2000);
-
-    const buttonDelete = await page.$('.button-delete');
-    const buttonReallyDelete = await page.$('.button-really-delete');
-    buttonDelete.click();
-    await page.waitForTimeout(2000);
-    buttonReallyDelete.click();
   });
 });
